@@ -54,8 +54,6 @@ print "len(x_testData) :",len(x_testData)
 print "Machine Output from svm:",classifier.predict(x_testData)
 plt.show()
 
-
-from sklearn.metrics import accuracy_score
 #Gaussian Naive Bayes
 from sklearn.naive_bayes import GaussianNB
 gaussian = GaussianNB()
@@ -64,33 +62,6 @@ y_pred=gaussian.predict(x_testData)
 
 print "len(x_testData) :",len(x_testData)
 print "Machine Output nb:",y_pred
-
-
-#Decision Tree Classifier
-from sklearn.tree import DecisionTreeClassifier
-decisiontree = DecisionTreeClassifier()
-decisiontree.fit(imageData[:],digits.target[:])
-y_pred=decisiontree.predict(x_testData)
-
-print "len(x_testData) :",len(x_testData)
-print "Machine Output dt:",y_pred
-
-
-#Perceptron
-from sklearn.linear_model import Perceptron
-perceptron = Perceptron()
-perceptron.fit(imageData[:],digits.target[:])
-y_pred=perceptron.predict(x_testData)
-print "len(x_testData) :",len(x_testData)
-print "Machine Output p:",y_pred
-
-#Linear SVC
-from sklearn.svm import LinearSVC
-linear_svc = LinearSVC()
-linear_svc.fit(imageData[:],digits.target[:])
-y_pred=linear_svc.predict(x_testData)
-print "len(x_testData) :",len(x_testData)
-print "Machine Output lsvc:",y_pred
 
 #Random Forest
 from sklearn.ensemble import RandomForestClassifier
@@ -101,18 +72,5 @@ y_pred=randomforest.predict(x_testData)
 print "len(x_testData) :",len(x_testData)
 print "Machine Output rf:",y_pred
 
-#KNN or K-Nearest Neighbour
-from sklearn.neighbors import KNeighborsClassifier
-knn = KNeighborsClassifier()
-knn.fit(imageData[:],digits.target[:])
-y_pred=knn.predict(x_testData)
-print "len(x_testData) :",len(x_testData)
-print "Machine Output knn:",y_pred
 
-#Gradient Boosting Classifier
-from sklearn.ensemble import GradientBoostingClassifier
-gbc = GradientBoostingClassifier()
-gbc.fit(imageData[:],digits.target[:])
-y_pred=gbc.predict(x_testData)
-print "len(x_testData) :",len(x_testData)
-print "Machine Output gbc:",y_pred
+
