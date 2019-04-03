@@ -37,7 +37,7 @@ classifier=svm.SVC(gamma=0.001)
 classifier.fit(imageData[:],digits.target[:])
 
 from scipy.misc import imread,imresize,bytescale
-img=imread("Two1.png")
+img=imread("Three.jpeg")
 img=imresize(img,(8,8))
 img=img.astype(digits.images.dtype)#to convert the data type of provided img to training data img
 
